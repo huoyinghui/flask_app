@@ -2,9 +2,6 @@
 import os
 import multiprocessing
 import getpass
-import logging
-import logging.handlers
-from logging.handlers import WatchedFileHandler
 
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,9 +20,9 @@ backlog = 2048
 
 
 # 发生错误时log的路径
-errorlog = os.path.join(BASE_DIR_LOGS, 'gunicorn_{}.error.log'.format(os.getpid()))
+errorlog = os.path.join(BASE_DIR_LOGS, 'gunicorn.error.log')
 # 正常时的log路径
-accesslog = os.path.join(BASE_DIR_LOGS, 'gunicorn_{}.access.log'.format(os.getpid()))
+accesslog = os.path.join(BASE_DIR_LOGS, 'gunicorn.access.log')
 # 日志等级
 loglevel = 'debug'
 # 进程名
