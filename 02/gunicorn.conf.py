@@ -28,7 +28,6 @@ errorlog = os.path.join(BASE_DIR_LOGS, 'gunicorn_{}.error.log'.format(os.getpid(
 accesslog = os.path.join(BASE_DIR_LOGS, 'gunicorn_{}.access.log'.format(os.getpid()))
 # 日志等级
 loglevel = 'debug'
-access_log_format = '%(t)s %(p)s %(h)s "%(r)s" %(s)s %(L)s %(b)s %(f)s" "%(a)s"'
 # 进程名
 proc_name = 'gunicorn_main'
 timeout = 30
